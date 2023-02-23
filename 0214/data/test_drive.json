@@ -1,0 +1,8 @@
+[
+{"num":"1","name":"홍길동","phone":"01012345678","sms":"1","email":"a@naver.com","region":"강남","s_car":"캐스퍼","my_car":"아반떼","s_date":"2023-02-10"},
+{"num":"2","name":"test","phone":"01012345678","sms":"1","email":"a@naver.com","region":"강남","s_car":"캐스퍼","my_car":"아반떼","s_date":"2023-02-10"},
+{"num":"3","name":"mika","phone":"01099561122","sms":"Y","email":"asdfasdf@naver.com","region":"송파점","s_car":"그랜저","my_car":"k5","s_date":"2023-02-25"},
+{"num":"4","name":"orange","phone":"01033334444","sms":"N","email":"test@naver.com","region":"강남점","s_car":"그랜저","my_car":"포터","s_date":"2023-02-28"},
+{"num":"5","name":"선생님이여~","phone":"01099995555","sms":"Y","email":"jeon9897@naver.com","region":"한남점","s_car":"캐스퍼","my_car":"bmw미니","s_date":"2023-02-25"},
+{"num":"6","name":"ph","phone":"01099561122","sms":"Y","email":"test@naver.com","region":"송파점","s_car":"그랜저","my_car":"포터","s_date":"2023-02-28"}
+]

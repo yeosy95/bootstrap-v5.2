@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 json데이터 출력하기</title>
+  <style>
+    table{
+      border:1px solid #333;
+      border-collapse: collapse;
+      width:1000px;
+    }
+    th, td{
+      border:1px solid #333;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    // $(function(){
+    //   // json 메소드
+    //   $.getJSON('./data/test_drive.json', function(data){
+    //     for(key in data){
+    //       // console.log('이름 : ' + data[key].phone);
+    //       document.write('<p>' + data[key].region + '</p>');
+    //       document.write('<p>' + data[key].s_date + '</p>');
+
+    //     }
+    //   })
+    // });
+        // document.write('<table>');
+        // document.write('<caption>시승예약 현황</caption>');
+        
+        // for(let i=0;i<=10;i++){
+        //   document.write('<tr>');
+        //   for(let j=1;j<=10;j++){
+        //     document.write('<td>' + j + '</td>');
+        //   } 
+        //   document.write('</tr>'); 
+        // }
+        // document.write('</table>');
+        $.getJSON('./data/test_drive.json',function(data){
+      let html =`<table class="car_reserve"><caption>시승신청 예약현황</caption><tr><th>번호</th><th>이름</th><th>전화번호</th><th>SNS</th><th>이메일</th><th>예약지점</th><th>시승차량</th><th>보유차량</th><th>시승날짜</th></tr>`;
+        // document.write('<table>');
+
+        for(key in data){
+          // document.write('<tr><td>' + data[key].name +'</td>' );
+          // document.write('<td>' + data[key].region + '</td>');
+          // document.write('<td>' + data[key].s_date + '</td></tr>');
+
+          html+=`<tr>`;
+            for(let i in data[key]){
+              html+=`<td>${data[key][i]}</td>`;
+            }
+
+            html+=`</tr>`;
+        }
+        html+=`<html>`;
+        $('.list').html(html);// 제이쿼리 문법 끼워서 선택해서 나오도록
+        
+    });
+  </script>
+</head>
+<body>
+  <h2>자바스크립트 json데이터 출력하기</h2>
+  <p>닷홈 SQL데이터 베이스에 저장된 'test_drive'테이블의 자료를 'json'파일로 저장하여 자바스크립트로 출력해보기</p>
+  <article class="list"></article>
+</body>
+</html>
